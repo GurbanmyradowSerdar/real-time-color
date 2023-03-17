@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Time</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 id="time">00:00:00</h1>
+      <p id="background">#666666</p>
+    </div>
+    <script>
+      let time = document.getElementById("time");
+      let background = document.getElementById("background");
+      function changeTime() {
+        let d = new Date();
+        let h = d.getHours();
+        let m = d.getMinutes();
+        let s = d.getSeconds();
+        if (h < 10) h = "0" + h;
+        if (m < 10) m = "0" + m;
+        if (s < 10) s = "0" + s;
+      }
+    </script>
+  </body>
+</html>
