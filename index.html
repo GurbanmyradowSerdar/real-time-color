@@ -4,22 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon" />
     <title>Real Time</title>
     <style>
       * {
         margin: 0px;
         padding: 0px;
       }
+      body {
+        color: #fff;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      }
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      h1 {
+        font-size: 50px;
+      }
+      p {
+        padding: 20px;
+        font-size: 25px;
+      }
     </style>
   </head>
   <body>
     <div>
       <h1 id="time">00:00:00</h1>
-      <p id="background">#666666</p>
+      <p id="background">#000000</p>
     </div>
     <script>
       let time = document.getElementById("time");
       let background = document.getElementById("background");
+      let body = document.body;
+      body.style.backgroundColor = "#000000";
       function changeTime() {
         let d = new Date();
         let h = d.getHours();
@@ -29,7 +50,11 @@
         if (m < 10) m = "0" + m;
         if (s < 10) s = "0" + s;
         time.innerHTML = h + ":" + m + ":" + s;
+        let bc = "#" + h + "" + m + "" + s;
+        background.innerHTML = bc;
+        body.style.backgroundColor = bc;
       }
+      setInterval(changeTime, 1000);
     </script>
   </body>
 </html>
