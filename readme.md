@@ -1,5 +1,5 @@
-# Git and Github for Course
+# Real time tracking and changing color
 
-Crash course for Git
+just for fun
 
-https://gurbanmyradowserdar.github.io/real-time-color/
+[reference](https://gurbanmyradowserdar.github.io/real-time-color/)
